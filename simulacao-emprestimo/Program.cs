@@ -24,7 +24,7 @@ var config = new ConfigurationBuilder()
             .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
             .Build();
 
-var defaultConnectionString = builder.Configuration["MongoDb:ConnectionString"];
+var defaultConnectionString = builder.Configuration["ConnectionString:DefaultConnectionString"];
 
 
 builder.Services.AddInfrastructure(defaultConnectionString);
